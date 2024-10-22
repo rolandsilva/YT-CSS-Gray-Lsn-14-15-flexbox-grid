@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 5px 0 10px 0;
+    padding: 5px;
+    background-color: rgb(43, 173, 199);
+    border: 1px solid black;
+}
+
+.container {
+    max-width: 800px;
+    height: 400px;
+    margin-inline: auto;
+    border: 1px solid #000;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* shorthand for row wrap */
+    flex-flow: row-reverse wrap;
+    /* aligns the main axis */
+    justify-content: center;
+    align-items: center;
+    /* aligns the cross axis */
+    /* align-content: space-evenly; */
+    gap: 1rem;
+}
+
+.box {
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 1 250px;
+    /* flex-basis: 250px;
+    flex-shrink: 1; */
+    /* flex-grow: 1; */
+    /* min-width: 100px; */
+    /* if in row then basis sets width if no height is given */
+    /* height: 100px; */
+    /* width: 100px; */
+
+}
+
+.box:nth-child(2) {
+    flex-shrink: 2;
+    /* flex-grow: 2; */
+    /* flex-basis: 200px; */
+    /* shorthand flex grow shrink basis */
+    flex: 2 2 250px;
+    /* sets the order 0=normal neg=first pos=end depending on direction */
+    order: -1;
+}
